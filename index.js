@@ -103,6 +103,12 @@ function letsPlay(){
         currentaction = "fd";
         console.log("Forward!");
     }
+    function reverse() {
+        leftWheel.rev(255); // This makes the car reverse.
+        rightWheel.rev(255); 
+        currentaction = "reversed";
+        console.log("Reverse!");
+    }
     function stop() {
         leftWheel.rev(0); // This makes the car stop.
         rightWheel.rev(0); 
@@ -131,6 +137,7 @@ function letsPlay(){
         'up': forward,
         'left': left,
         'right': right,
+        'down': reverse,
         'space': stop,
         'q': exit
     };
